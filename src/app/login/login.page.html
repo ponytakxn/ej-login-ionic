@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Welcome!</ion-card-title>
+      <ion-card-subtitle>Fill up your credentials to login</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-item>
+        <ion-input label="Username: " placeholder="john.doe" [(ngModel)]="loginInput.username"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Password: " type="password" placeholder="****" [(ngModel)]="loginInput.password"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  
+    <ion-button (click)="userLogin(loginInput)">Login</ion-button>
+    <ion-button (click)="loginRestart()">Clear</ion-button>
+  </ion-card>
+</ion-content>
